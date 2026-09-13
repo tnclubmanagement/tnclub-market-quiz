@@ -33,6 +33,16 @@ def load_catalog():
     return {"schema_version": "1", "packs": packs}
 
 
+def load_static_catalog():
+    catalog = load_catalog()
+    packs = []
+    for pack in catalog["packs"]:
+        metadata = {key: value for key, value in pack.items() if key != "quizzes"}
+        metadata["pack_url"] = f"./packs/{pack['pack_id']}.json"
+        packs.append(metadata)
+    return {"schema_version": catalog["schema_version"], "packs": packs}
+
+
 def filter_catalog(catalog, query):
     search = query.get("q", [""])[0].strip().lower()
     filters = {
@@ -75,6 +85,13 @@ class MarketHandler(BaseHTTPRequestHandler):
             if is_download:
                 return self.send_download(pack)
             return self.send_json(pack)
+        if path == "/catalog.json":
+            return self.send_json(load_static_catalog())
+        if path.startswith("/packs/"):
+            pack_name = Path(path.removeprefix("/packs/")).name
+            if not pack_name.endswith(".json"):
+                return self.send_json({"error": "Pack not found"}, status=404)
+            return self.send_file(PACKS_PATH / pack_name)
         if path in ("/", "/index.html"):
             return self.send_file(WEB_ROOT / "index.html")
 

@@ -129,14 +129,22 @@
       });
     }
 
-    window.showPack = (packId) => {
+    window.showPack = async (packId) => {
       const pack = state.packs.find(item => item.pack_id === packId);
       if (!pack) return;
-      const formatted = JSON.stringify(pack, null, 2);
-      $('json').textContent = formatted;
-      $('modal-json').textContent = formatted;
       $('modal-title').textContent = `${pack.title} · JSON`;
+      $('modal-json').textContent = 'Loading pack…';
       $('json-modal').classList.add('is-open');
+      try {
+        const response = await fetch(pack.pack_url);
+        if (!response.ok) throw new Error('Unable to load pack');
+        const fullPack = await response.json();
+        const formatted = JSON.stringify(fullPack, null, 2);
+        $('json').textContent = formatted;
+        $('modal-json').textContent = formatted;
+      } catch (error) {
+        $('modal-json').textContent = error.message;
+      }
     };
 
     function closeModal() {
@@ -150,7 +158,7 @@
 
     async function start() {
       try {
-        const response = await fetch('/api/packs');
+        const response = await fetch('./catalog.json');
         if (!response.ok) throw new Error('Unable to load catalog');
         const catalog = await response.json();
         state.packs = catalog.packs || [];
