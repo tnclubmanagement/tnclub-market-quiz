@@ -1,0 +1,709 @@
+{
+  "pack_id": "react-redux-saga",
+  "title": "React Advanced: Redux Saga",
+  "description": "Explore generator-based side effects, watchers, workers, cancellation, retries, and complex async flows with Redux Saga.",
+  "subject": "React",
+  "topic_id": "technology",
+  "level": "Advanced",
+  "kind": "Special",
+  "content_version": "1",
+  "schema_version": "1",
+  "quiz_count": 1,
+  "question_count": 20,
+  "status": "available",
+  "quizzes": [
+    {
+      "metadata": {
+        "quiz_id": "react_redux_saga_basics",
+        "title": "Redux Saga Checkpoint",
+        "subject": "react",
+        "level": "advanced",
+        "kind": "special",
+        "pack_id": "react-redux-saga",
+        "topic_id": "technology",
+        "language": "javascript",
+        "difficulty": "medium",
+        "time_limit_minutes": 5,
+        "total_questions": 20,
+        "pass_percentage": 70,
+        "timer_mode": "global",
+        "per_question_time_seconds": 0,
+        "negative_marking": false,
+        "shuffle_questions": false,
+        "shuffle_options": false,
+        "strict_mode": false,
+        "tags": [
+          "react",
+          "redux",
+          "saga",
+          "generators"
+        ],
+        "created_by": "TN Club",
+        "created_at": "2026-01-01T00:00:00Z",
+        "version": "1.0.0"
+      },
+      "questions": [
+        {
+          "id": "react_redux_saga_q001",
+          "area": "generators",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What JavaScript feature is central to Redux Saga effects?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Generator functions"
+            },
+            {
+              "key": "B",
+              "text": "CSS custom properties"
+            },
+            {
+              "key": "C",
+              "text": "Web Components only"
+            },
+            {
+              "key": "D",
+              "text": "SQL triggers"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Redux Saga uses generator functions to describe asynchronous effects.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q002",
+          "area": "effects",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does a Saga effect usually represent?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A declarative instruction"
+            },
+            {
+              "key": "B",
+              "text": "A DOM element"
+            },
+            {
+              "key": "C",
+              "text": "A CSS rule"
+            },
+            {
+              "key": "D",
+              "text": "A database table"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Effects describe work for the middleware to execute.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q003",
+          "area": "takeEvery",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does takeEvery do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Starts a task for every matching action"
+            },
+            {
+              "key": "B",
+              "text": "Takes only the last action"
+            },
+            {
+              "key": "C",
+              "text": "Stops all tasks"
+            },
+            {
+              "key": "D",
+              "text": "Changes reducers"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "takeEvery allows concurrent handling of matching actions.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q004",
+          "area": "takeLatest",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does takeLatest do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Keeps the latest task and cancels the previous one"
+            },
+            {
+              "key": "B",
+              "text": "Runs no tasks"
+            },
+            {
+              "key": "C",
+              "text": "Runs only the first task"
+            },
+            {
+              "key": "D",
+              "text": "Sorts actions"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "takeLatest cancels an older task when a newer matching action arrives.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q005",
+          "area": "call",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is call commonly used for in Saga?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Describing a function invocation"
+            },
+            {
+              "key": "B",
+              "text": "Dispatching CSS"
+            },
+            {
+              "key": "C",
+              "text": "Reading a reducer directly"
+            },
+            {
+              "key": "D",
+              "text": "Creating JSX"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "call yields a declarative function invocation.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q006",
+          "area": "put",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does put describe?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispatching an action"
+            },
+            {
+              "key": "B",
+              "text": "Starting a browser"
+            },
+            {
+              "key": "C",
+              "text": "Updating CSS"
+            },
+            {
+              "key": "D",
+              "text": "Reading localStorage only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "put schedules an action for dispatch.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q007",
+          "area": "select",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does select read?",
+          "options": [
+            {
+              "key": "A",
+              "text": "State from the Redux store"
+            },
+            {
+              "key": "B",
+              "text": "A DOM selector only"
+            },
+            {
+              "key": "C",
+              "text": "A network socket"
+            },
+            {
+              "key": "D",
+              "text": "A CSS file"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "select retrieves state for a Saga.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q008",
+          "area": "fork",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does fork create?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A non-blocking task"
+            },
+            {
+              "key": "B",
+              "text": "A database fork"
+            },
+            {
+              "key": "C",
+              "text": "A new reducer file"
+            },
+            {
+              "key": "D",
+              "text": "A CSS branch"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "fork starts a task without blocking the current Saga.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q009",
+          "area": "join",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does join do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Waits for a forked task"
+            },
+            {
+              "key": "B",
+              "text": "Deletes a task"
+            },
+            {
+              "key": "C",
+              "text": "Dispatches CSS"
+            },
+            {
+              "key": "D",
+              "text": "Reads props"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "join waits for a forked task to finish.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q010",
+          "area": "cancel",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does cancel do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Stops a running Saga task"
+            },
+            {
+              "key": "B",
+              "text": "Clears all state"
+            },
+            {
+              "key": "C",
+              "text": "Removes an action type"
+            },
+            {
+              "key": "D",
+              "text": "Changes a route only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "cancel requests cancellation of a running task.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q011",
+          "area": "race",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does race model?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Competing effects where one result wins"
+            },
+            {
+              "key": "B",
+              "text": "A list sort"
+            },
+            {
+              "key": "C",
+              "text": "A reducer merge"
+            },
+            {
+              "key": "D",
+              "text": "A CSS animation"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "race resolves based on the first competing effect to finish.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q012",
+          "area": "all",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does all allow?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Waiting for multiple effects"
+            },
+            {
+              "key": "B",
+              "text": "Deleting effects"
+            },
+            {
+              "key": "C",
+              "text": "Calling only reducers"
+            },
+            {
+              "key": "D",
+              "text": "Rendering lists"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "all runs effects together and waits for all results.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q013",
+          "area": "watcher",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is a watcher Saga responsible for?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Listening for actions"
+            },
+            {
+              "key": "B",
+              "text": "Rendering components"
+            },
+            {
+              "key": "C",
+              "text": "Writing CSS"
+            },
+            {
+              "key": "D",
+              "text": "Opening databases"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A watcher waits for actions and starts worker Sagas.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q014",
+          "area": "worker",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does a worker Saga usually do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Performs the requested business effect"
+            },
+            {
+              "key": "B",
+              "text": "Defines a CSS class"
+            },
+            {
+              "key": "C",
+              "text": "Mounts React"
+            },
+            {
+              "key": "D",
+              "text": "Builds HTML"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A worker carries out the effect after a watcher starts it.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q015",
+          "area": "finally",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why use finally in a Saga?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To run cleanup even after cancellation"
+            },
+            {
+              "key": "B",
+              "text": "To dispatch every action twice"
+            },
+            {
+              "key": "C",
+              "text": "To skip errors"
+            },
+            {
+              "key": "D",
+              "text": "To mutate state"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "finally is useful for cleanup on completion or cancellation.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q016",
+          "area": "errors",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "How should Saga errors commonly be handled?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Catch them and dispatch a failure action"
+            },
+            {
+              "key": "B",
+              "text": "Ignore every error"
+            },
+            {
+              "key": "C",
+              "text": "Put them in CSS"
+            },
+            {
+              "key": "D",
+              "text": "Log credentials"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Failure actions let the UI represent an unsuccessful effect.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q017",
+          "area": "retry",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does retry help with?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Transient failures"
+            },
+            {
+              "key": "B",
+              "text": "Permanent syntax errors only"
+            },
+            {
+              "key": "C",
+              "text": "CSS parsing"
+            },
+            {
+              "key": "D",
+              "text": "Component keys"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Retry can recover from temporary network or service failures.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q018",
+          "area": "channels",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What can an event channel represent?",
+          "options": [
+            {
+              "key": "A",
+              "text": "External event sources"
+            },
+            {
+              "key": "B",
+              "text": "A CSS namespace"
+            },
+            {
+              "key": "C",
+              "text": "A React prop"
+            },
+            {
+              "key": "D",
+              "text": "A database index"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Channels connect external events to Saga consumers.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q019",
+          "area": "testing",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why are Saga effects easy to test?",
+          "options": [
+            {
+              "key": "A",
+              "text": "They are declarative values"
+            },
+            {
+              "key": "B",
+              "text": "They require a browser always"
+            },
+            {
+              "key": "C",
+              "text": "They mutate the DOM"
+            },
+            {
+              "key": "D",
+              "text": "They hide all inputs"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Declarative effects can be inspected without performing the real operation.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_saga_q020",
+          "area": "blocking",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is a blocking call effect?",
+          "options": [
+            {
+              "key": "A",
+              "text": "The Saga waits for its result"
+            },
+            {
+              "key": "B",
+              "text": "The browser freezes forever"
+            },
+            {
+              "key": "C",
+              "text": "It cancels reducers"
+            },
+            {
+              "key": "D",
+              "text": "It skips the request"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A blocking effect pauses the current Saga until it resolves.",
+          "reference_url": "https://redux.js.org/usage"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "pack_id": "arithmetic-number-theory",
+  "title": "Arithmetic and Number Theory",
+  "description": "Learn operations with integers, fractions, divisibility, prime numbers, factors, multiples, and numerical patterns.",
+  "subject": "Mathematics",
+  "topic_id": "mathematics",
+  "level": "Intermediate",
+  "kind": "Special",
+  "content_version": "1",
+  "schema_version": "1",
+  "quiz_count": 1,
+  "question_count": 20,
+  "status": "available",
+  "quizzes": [
+    {
+      "metadata": {
+        "quiz_id": "arithmetic_number_theory_basics",
+        "title": "Arithmetic and Number Theory Checkpoint",
+        "subject": "mathematics",
+        "level": "intermediate",
+        "kind": "special",
+        "pack_id": "arithmetic-number-theory",
+        "topic_id": "mathematics",
+        "language": "en",
+        "difficulty": "medium",
+        "time_limit_minutes": 5,
+        "total_questions": 20,
+        "pass_percentage": 70,
+        "timer_mode": "global",
+        "per_question_time_seconds": 0,
+        "negative_marking": false,
+        "shuffle_questions": false,
+        "shuffle_options": false,
+        "strict_mode": false,
+        "tags": [
+          "mathematics",
+          "arithmetic",
+          "number-theory"
+        ],
+        "created_by": "TN Club",
+        "created_at": "2026-01-01T00:00:00Z",
+        "version": "1.0.0"
+      },
+      "questions": [
+        {
+          "id": "arithmetic_number_theory_q001",
+          "area": "prime-numbers",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Which of these numbers is prime?",
+          "options": [
+            {
+              "key": "A",
+              "text": "21"
+            },
+            {
+              "key": "B",
+              "text": "27"
+            },
+            {
+              "key": "C",
+              "text": "29"
+            },
+            {
+              "key": "D",
+              "text": "35"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "29 has no positive divisors other than 1 and 29.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q002",
+          "area": "divisibility",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Which number is divisible by 3?",
+          "options": [
+            {
+              "key": "A",
+              "text": "14"
+            },
+            {
+              "key": "B",
+              "text": "22"
+            },
+            {
+              "key": "C",
+              "text": "27"
+            },
+            {
+              "key": "D",
+              "text": "31"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "The digits of 27 sum to 9, which is divisible by 3.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q003",
+          "area": "factors",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the greatest common factor of 18 and 24?",
+          "options": [
+            {
+              "key": "A",
+              "text": "2"
+            },
+            {
+              "key": "B",
+              "text": "3"
+            },
+            {
+              "key": "C",
+              "text": "6"
+            },
+            {
+              "key": "D",
+              "text": "12"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "The greatest number dividing both 18 and 24 is 6.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q004",
+          "area": "multiples",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the least common multiple of 4 and 6?",
+          "options": [
+            {
+              "key": "A",
+              "text": "8"
+            },
+            {
+              "key": "B",
+              "text": "10"
+            },
+            {
+              "key": "C",
+              "text": "12"
+            },
+            {
+              "key": "D",
+              "text": "24"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "The smallest positive number divisible by both is 12.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q005",
+          "area": "fractions",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 2/3 of 18?",
+          "options": [
+            {
+              "key": "A",
+              "text": "6"
+            },
+            {
+              "key": "B",
+              "text": "9"
+            },
+            {
+              "key": "C",
+              "text": "12"
+            },
+            {
+              "key": "D",
+              "text": "15"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "18 × 2/3 = 12.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q006",
+          "area": "fractions",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Which fraction is equivalent to 3/5?",
+          "options": [
+            {
+              "key": "A",
+              "text": "6/10"
+            },
+            {
+              "key": "B",
+              "text": "5/8"
+            },
+            {
+              "key": "C",
+              "text": "9/20"
+            },
+            {
+              "key": "D",
+              "text": "12/25"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Multiplying numerator and denominator by 2 gives 6/10.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q007",
+          "area": "integers",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is −8 + 13?",
+          "options": [
+            {
+              "key": "A",
+              "text": "−21"
+            },
+            {
+              "key": "B",
+              "text": "−5"
+            },
+            {
+              "key": "C",
+              "text": "5"
+            },
+            {
+              "key": "D",
+              "text": "21"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "Adding 13 to −8 gives 5.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q008",
+          "area": "integers",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 7 − 15?",
+          "options": [
+            {
+              "key": "A",
+              "text": "−22"
+            },
+            {
+              "key": "B",
+              "text": "−8"
+            },
+            {
+              "key": "C",
+              "text": "8"
+            },
+            {
+              "key": "D",
+              "text": "22"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "7 − 15 = −8.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q009",
+          "area": "absolute-value",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the absolute value of −12?",
+          "options": [
+            {
+              "key": "A",
+              "text": "−12"
+            },
+            {
+              "key": "B",
+              "text": "0"
+            },
+            {
+              "key": "C",
+              "text": "12"
+            },
+            {
+              "key": "D",
+              "text": "24"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "Absolute value is distance from zero, so it is 12.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q010",
+          "area": "prime-factorization",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the prime factorization of 12?",
+          "options": [
+            {
+              "key": "A",
+              "text": "2 × 6"
+            },
+            {
+              "key": "B",
+              "text": "2² × 3"
+            },
+            {
+              "key": "C",
+              "text": "3 × 4"
+            },
+            {
+              "key": "D",
+              "text": "12 × 1"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "12 = 2 × 2 × 3 = 2² × 3.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q011",
+          "area": "squares",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 9²?",
+          "options": [
+            {
+              "key": "A",
+              "text": "18"
+            },
+            {
+              "key": "B",
+              "text": "72"
+            },
+            {
+              "key": "C",
+              "text": "81"
+            },
+            {
+              "key": "D",
+              "text": "99"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "9 × 9 = 81.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q012",
+          "area": "remainders",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the remainder when 17 is divided by 5?",
+          "options": [
+            {
+              "key": "A",
+              "text": "1"
+            },
+            {
+              "key": "B",
+              "text": "2"
+            },
+            {
+              "key": "C",
+              "text": "3"
+            },
+            {
+              "key": "D",
+              "text": "4"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "5 × 3 = 15, leaving a remainder of 2.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q013",
+          "area": "odd-even",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Which expression is always even?",
+          "options": [
+            {
+              "key": "A",
+              "text": "2n"
+            },
+            {
+              "key": "B",
+              "text": "2n + 1"
+            },
+            {
+              "key": "C",
+              "text": "n + 1"
+            },
+            {
+              "key": "D",
+              "text": "3n"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "An integer multiple of 2 is always even.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q014",
+          "area": "sequences",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the next number: 2, 5, 8, 11, ...?",
+          "options": [
+            {
+              "key": "A",
+              "text": "12"
+            },
+            {
+              "key": "B",
+              "text": "13"
+            },
+            {
+              "key": "C",
+              "text": "14"
+            },
+            {
+              "key": "D",
+              "text": "15"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "The sequence increases by 3, so the next number is 14.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q015",
+          "area": "ratios",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "The ratio of red to blue marbles is 2:3. If there are 10 red marbles, how many blue marbles are there?",
+          "options": [
+            {
+              "key": "A",
+              "text": "12"
+            },
+            {
+              "key": "B",
+              "text": "15"
+            },
+            {
+              "key": "C",
+              "text": "18"
+            },
+            {
+              "key": "D",
+              "text": "20"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "Multiplying the ratio by 5 gives 10:15.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q016",
+          "area": "percentages",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 25% of 80?",
+          "options": [
+            {
+              "key": "A",
+              "text": "10"
+            },
+            {
+              "key": "B",
+              "text": "20"
+            },
+            {
+              "key": "C",
+              "text": "25"
+            },
+            {
+              "key": "D",
+              "text": "40"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "25% is one quarter, and 80 ÷ 4 = 20.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q017",
+          "area": "powers",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 2⁵?",
+          "options": [
+            {
+              "key": "A",
+              "text": "10"
+            },
+            {
+              "key": "B",
+              "text": "16"
+            },
+            {
+              "key": "C",
+              "text": "25"
+            },
+            {
+              "key": "D",
+              "text": "32"
+            }
+          ],
+          "correct_keys": [
+            "D"
+          ],
+          "explanation": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q018",
+          "area": "gcd",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the greatest common divisor of 45 and 60?",
+          "options": [
+            {
+              "key": "A",
+              "text": "5"
+            },
+            {
+              "key": "B",
+              "text": "10"
+            },
+            {
+              "key": "C",
+              "text": "15"
+            },
+            {
+              "key": "D",
+              "text": "20"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "15 is the largest number dividing both 45 and 60.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q019",
+          "area": "lcm",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is the least common multiple of 5 and 8?",
+          "options": [
+            {
+              "key": "A",
+              "text": "13"
+            },
+            {
+              "key": "B",
+              "text": "20"
+            },
+            {
+              "key": "C",
+              "text": "40"
+            },
+            {
+              "key": "D",
+              "text": "80"
+            }
+          ],
+          "correct_keys": [
+            "C"
+          ],
+          "explanation": "The smallest common positive multiple is 40.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        },
+        {
+          "id": "arithmetic_number_theory_q020",
+          "area": "modular-arithmetic",
+          "challenge_type": "calculation",
+          "type": "single_choice",
+          "language": "en",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is 23 mod 7?",
+          "options": [
+            {
+              "key": "A",
+              "text": "1"
+            },
+            {
+              "key": "B",
+              "text": "2"
+            },
+            {
+              "key": "C",
+              "text": "3"
+            },
+            {
+              "key": "D",
+              "text": "4"
+            }
+          ],
+          "correct_keys": [
+            "B"
+          ],
+          "explanation": "23 = 7 × 3 + 2, so the remainder is 2.",
+          "reference_url": "https://en.wikipedia.org/wiki/Number_theory"
+        }
+      ]
+    }
+  ]
+}

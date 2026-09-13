@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "pack_files": [
+    "packs/react-fundamentals.json",
+    "packs/react-advanced-middleware.json",
+    "packs/react-redux-thunk.json",
+    "packs/react-redux-saga.json",
+    "packs/math-fundamentals.json",
+    "packs/geometry.json",
+    "packs/arithmetic-number-theory.json"
+  ]
+}

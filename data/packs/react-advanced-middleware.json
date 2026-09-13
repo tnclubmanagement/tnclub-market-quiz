@@ -1,0 +1,708 @@
+{
+  "pack_id": "react-advanced-middleware",
+  "title": "React Advanced: Middleware",
+  "description": "Understand middleware architecture, request pipelines, side effects, logging, and async workflows in React applications.",
+  "subject": "React",
+  "topic_id": "technology",
+  "level": "Advanced",
+  "kind": "Special",
+  "content_version": "1",
+  "schema_version": "1",
+  "quiz_count": 1,
+  "question_count": 20,
+  "status": "available",
+  "quizzes": [
+    {
+      "metadata": {
+        "quiz_id": "react_middleware_basics",
+        "title": "React Middleware Checkpoint",
+        "subject": "react",
+        "level": "advanced",
+        "kind": "special",
+        "pack_id": "react-advanced-middleware",
+        "topic_id": "technology",
+        "language": "javascript",
+        "difficulty": "medium",
+        "time_limit_minutes": 5,
+        "total_questions": 20,
+        "pass_percentage": 70,
+        "timer_mode": "global",
+        "per_question_time_seconds": 0,
+        "negative_marking": false,
+        "shuffle_questions": false,
+        "shuffle_options": false,
+        "strict_mode": false,
+        "tags": [
+          "react",
+          "middleware",
+          "side-effects"
+        ],
+        "created_by": "TN Club",
+        "created_at": "2026-01-01T00:00:00Z",
+        "version": "1.0.0"
+      },
+      "questions": [
+        {
+          "id": "react_advanced_middleware_q001",
+          "area": "middleware",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is a common responsibility of middleware in a state pipeline?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Intercept actions before reducers"
+            },
+            {
+              "key": "B",
+              "text": "Render every DOM element"
+            },
+            {
+              "key": "C",
+              "text": "Compile CSS"
+            },
+            {
+              "key": "D",
+              "text": "Replace the event loop"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Middleware can inspect, transform, delay, or trigger work around actions.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q002",
+          "area": "pipeline",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does middleware commonly receive?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispatch, getState, and next"
+            },
+            {
+              "key": "B",
+              "text": "Only a DOM node"
+            },
+            {
+              "key": "C",
+              "text": "A CSS selector"
+            },
+            {
+              "key": "D",
+              "text": "A database cursor"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Redux middleware can access dispatch, getState, and the next function.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q003",
+          "area": "logging",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Where is logging middleware typically placed?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Around action dispatch"
+            },
+            {
+              "key": "B",
+              "text": "Inside CSS"
+            },
+            {
+              "key": "C",
+              "text": "After HTML parsing only"
+            },
+            {
+              "key": "D",
+              "text": "In a database schema"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "It observes actions as they pass through dispatch.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q004",
+          "area": "ordering",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why does middleware order matter?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Each middleware sees the pipeline at a different stage"
+            },
+            {
+              "key": "B",
+              "text": "It changes CSS specificity"
+            },
+            {
+              "key": "C",
+              "text": "It changes database indexes"
+            },
+            {
+              "key": "D",
+              "text": "It never matters"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Middleware runs in configured order, affecting what later middleware receives.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q005",
+          "area": "next",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does calling next(action) usually do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Pass the action to the next middleware"
+            },
+            {
+              "key": "B",
+              "text": "Cancel every request"
+            },
+            {
+              "key": "C",
+              "text": "Render a component"
+            },
+            {
+              "key": "D",
+              "text": "Reset the store"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "next forwards the action down the middleware chain.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q006",
+          "area": "dispatch",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is dispatch used for?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Sending an action into the store pipeline"
+            },
+            {
+              "key": "B",
+              "text": "Reading CSS"
+            },
+            {
+              "key": "C",
+              "text": "Creating a component file"
+            },
+            {
+              "key": "D",
+              "text": "Opening a browser tab"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Dispatch sends an action through middleware and reducers.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q007",
+          "area": "async",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why can middleware be useful for async work?",
+          "options": [
+            {
+              "key": "A",
+              "text": "It can coordinate before and after a request"
+            },
+            {
+              "key": "B",
+              "text": "Reducers can make network calls directly"
+            },
+            {
+              "key": "C",
+              "text": "It removes all errors"
+            },
+            {
+              "key": "D",
+              "text": "It replaces HTTP"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Middleware can start effects and dispatch loading, success, or failure actions.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q008",
+          "area": "errors",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Where should an async middleware flow usually report failures?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A failure action or error boundary"
+            },
+            {
+              "key": "B",
+              "text": "A hidden CSS rule"
+            },
+            {
+              "key": "C",
+              "text": "A random component key"
+            },
+            {
+              "key": "D",
+              "text": "A URL hash only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Explicit failure actions make errors observable to the UI.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q009",
+          "area": "idempotency",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does an idempotent effect mean?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Repeating it has the same intended result"
+            },
+            {
+              "key": "B",
+              "text": "It always fails"
+            },
+            {
+              "key": "C",
+              "text": "It only runs in CSS"
+            },
+            {
+              "key": "D",
+              "text": "It requires two reducers"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Idempotent operations can be safely repeated without unintended duplication.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q010",
+          "area": "cancellation",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why cancel obsolete requests?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To avoid stale results updating state"
+            },
+            {
+              "key": "B",
+              "text": "To increase bundle size"
+            },
+            {
+              "key": "C",
+              "text": "To disable reducers"
+            },
+            {
+              "key": "D",
+              "text": "To change JSX syntax"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Cancellation prevents outdated work from winning a race.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q011",
+          "area": "debounce",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does debouncing input usually do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Waits for a pause before running work"
+            },
+            {
+              "key": "B",
+              "text": "Runs on every keystroke faster"
+            },
+            {
+              "key": "C",
+              "text": "Deletes input"
+            },
+            {
+              "key": "D",
+              "text": "Blocks all requests forever"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Debouncing delays work until input has been quiet for a chosen interval.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q012",
+          "area": "throttle",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does throttling limit?",
+          "options": [
+            {
+              "key": "A",
+              "text": "How often work can run"
+            },
+            {
+              "key": "B",
+              "text": "The number of reducers"
+            },
+            {
+              "key": "C",
+              "text": "CSS colors"
+            },
+            {
+              "key": "D",
+              "text": "Component names"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Throttling enforces a maximum execution frequency.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q013",
+          "area": "payloads",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What should an action payload contain?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Data needed for the state transition"
+            },
+            {
+              "key": "B",
+              "text": "A whole browser window"
+            },
+            {
+              "key": "C",
+              "text": "Secret credentials in logs"
+            },
+            {
+              "key": "D",
+              "text": "CSS declarations"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Payloads carry the data reducers or middleware need.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q014",
+          "area": "testing",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is useful to test in middleware?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Inputs, forwarded actions, and effects"
+            },
+            {
+              "key": "B",
+              "text": "Only file names"
+            },
+            {
+              "key": "C",
+              "text": "Browser pixels only"
+            },
+            {
+              "key": "D",
+              "text": "Package timestamps"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Middleware tests should verify behavior at the pipeline boundary.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q015",
+          "area": "pure-reducers",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why keep reducers pure when using middleware?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Predictability and replayability"
+            },
+            {
+              "key": "B",
+              "text": "To make HTTP requests"
+            },
+            {
+              "key": "C",
+              "text": "To access the DOM"
+            },
+            {
+              "key": "D",
+              "text": "To mutate actions"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Pure reducers make state transitions deterministic and testable.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q016",
+          "area": "analytics",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What can analytics middleware observe?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispatched events"
+            },
+            {
+              "key": "B",
+              "text": "Only CSS changes"
+            },
+            {
+              "key": "C",
+              "text": "Database schema migrations"
+            },
+            {
+              "key": "D",
+              "text": "TypeScript types"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Middleware can observe actions and record safe event metadata.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q017",
+          "area": "authentication",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is a safer middleware responsibility for auth expiry?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispatch a session-expired action"
+            },
+            {
+              "key": "B",
+              "text": "Log access tokens"
+            },
+            {
+              "key": "C",
+              "text": "Render passwords"
+            },
+            {
+              "key": "D",
+              "text": "Ignore failures"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A session-expired action lets the app respond without exposing secrets.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q018",
+          "area": "normalization",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why normalize async states?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Consistent loading, success, and failure handling"
+            },
+            {
+              "key": "B",
+              "text": "To remove all data"
+            },
+            {
+              "key": "C",
+              "text": "To change HTML tags"
+            },
+            {
+              "key": "D",
+              "text": "To skip validation"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A consistent state model makes UI behavior easier to reason about.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q019",
+          "area": "composition",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is middleware composition?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Combining multiple middleware functions"
+            },
+            {
+              "key": "B",
+              "text": "Merging CSS selectors"
+            },
+            {
+              "key": "C",
+              "text": "Copying reducers into components"
+            },
+            {
+              "key": "D",
+              "text": "Joining database tables"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Composition connects middleware into one dispatch pipeline.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_advanced_middleware_q020",
+          "area": "observability",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What makes middleware logs useful?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Action context without sensitive data"
+            },
+            {
+              "key": "B",
+              "text": "Every secret value"
+            },
+            {
+              "key": "C",
+              "text": "Random timestamps only"
+            },
+            {
+              "key": "D",
+              "text": "Minified stack traces only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Useful logs provide context while excluding credentials and personal data.",
+          "reference_url": "https://redux.js.org/usage"
+        }
+      ]
+    }
+  ]
+}

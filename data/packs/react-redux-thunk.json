@@ -1,0 +1,709 @@
+{
+  "pack_id": "react-redux-thunk",
+  "title": "React Advanced: Redux Thunk",
+  "description": "Practice asynchronous Redux logic with thunk actions, API calls, loading states, error handling, and dispatch composition.",
+  "subject": "React",
+  "topic_id": "technology",
+  "level": "Advanced",
+  "kind": "Special",
+  "content_version": "1",
+  "schema_version": "1",
+  "quiz_count": 1,
+  "question_count": 20,
+  "status": "available",
+  "quizzes": [
+    {
+      "metadata": {
+        "quiz_id": "react_redux_thunk_basics",
+        "title": "Redux Thunk Checkpoint",
+        "subject": "react",
+        "level": "advanced",
+        "kind": "special",
+        "pack_id": "react-redux-thunk",
+        "topic_id": "technology",
+        "language": "javascript",
+        "difficulty": "medium",
+        "time_limit_minutes": 5,
+        "total_questions": 20,
+        "pass_percentage": 70,
+        "timer_mode": "global",
+        "per_question_time_seconds": 0,
+        "negative_marking": false,
+        "shuffle_questions": false,
+        "shuffle_options": false,
+        "strict_mode": false,
+        "tags": [
+          "react",
+          "redux",
+          "thunk",
+          "async"
+        ],
+        "created_by": "TN Club",
+        "created_at": "2026-01-01T00:00:00Z",
+        "version": "1.0.0"
+      },
+      "questions": [
+        {
+          "id": "react_redux_thunk_q001",
+          "area": "thunks",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does a Redux Thunk allow an action creator to return?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A function receiving dispatch and getState"
+            },
+            {
+              "key": "B",
+              "text": "Only a CSS class"
+            },
+            {
+              "key": "C",
+              "text": "A database connection"
+            },
+            {
+              "key": "D",
+              "text": "A component tree"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Thunk middleware lets an action creator return a function.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q002",
+          "area": "async",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why use a thunk for an API request?",
+          "options": [
+            {
+              "key": "A",
+              "text": "It can dispatch before and after the request"
+            },
+            {
+              "key": "B",
+              "text": "It removes the need for state"
+            },
+            {
+              "key": "C",
+              "text": "It replaces React"
+            },
+            {
+              "key": "D",
+              "text": "It compiles CSS"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A thunk can dispatch loading, success, and failure actions around a request.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q003",
+          "area": "dispatch",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is commonly available inside a thunk?",
+          "options": [
+            {
+              "key": "A",
+              "text": "dispatch and getState"
+            },
+            {
+              "key": "B",
+              "text": "Only props"
+            },
+            {
+              "key": "C",
+              "text": "A DOM node"
+            },
+            {
+              "key": "D",
+              "text": "A CSS parser"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Thunk middleware calls the function with dispatch and getState.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q004",
+          "area": "loading",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What should a request flow usually dispatch first?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A loading action"
+            },
+            {
+              "key": "B",
+              "text": "A success action before work"
+            },
+            {
+              "key": "C",
+              "text": "A CSS action"
+            },
+            {
+              "key": "D",
+              "text": "Nothing ever"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A loading action lets the UI show progress.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q005",
+          "area": "success",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "When should a success action be dispatched?",
+          "options": [
+            {
+              "key": "A",
+              "text": "After valid data is received"
+            },
+            {
+              "key": "B",
+              "text": "Before the request starts"
+            },
+            {
+              "key": "C",
+              "text": "On every error"
+            },
+            {
+              "key": "D",
+              "text": "During rendering only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Success follows a completed and validated request.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q006",
+          "area": "failure",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What should a failure action contain?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Safe error information"
+            },
+            {
+              "key": "B",
+              "text": "An access token"
+            },
+            {
+              "key": "C",
+              "text": "A password"
+            },
+            {
+              "key": "D",
+              "text": "The whole request object"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Failure state should expose useful, non-sensitive error details.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q007",
+          "area": "getState",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why might a thunk call getState?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To avoid duplicate or stale requests"
+            },
+            {
+              "key": "B",
+              "text": "To mutate props"
+            },
+            {
+              "key": "C",
+              "text": "To render CSS"
+            },
+            {
+              "key": "D",
+              "text": "To create a reducer"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Current state can guide whether work is needed.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q008",
+          "area": "conditional",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What can a thunk do conditionally?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Skip a request when data is already fresh"
+            },
+            {
+              "key": "B",
+              "text": "Change JSX syntax"
+            },
+            {
+              "key": "C",
+              "text": "Delete the store"
+            },
+            {
+              "key": "D",
+              "text": "Override browser security"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Thunks can inspect state before dispatching work.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q009",
+          "area": "promise",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What may an async thunk return?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A promise for the operation"
+            },
+            {
+              "key": "B",
+              "text": "Only a number"
+            },
+            {
+              "key": "C",
+              "text": "A CSS rule"
+            },
+            {
+              "key": "D",
+              "text": "A DOM tree"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "An async thunk commonly returns a promise.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q010",
+          "area": "composition",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What is thunk composition?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Dispatching one thunk from another"
+            },
+            {
+              "key": "B",
+              "text": "Merging CSS files"
+            },
+            {
+              "key": "C",
+              "text": "Combining DOM nodes"
+            },
+            {
+              "key": "D",
+              "text": "Copying reducers"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A thunk can dispatch other actions or thunks to coordinate work.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q011",
+          "area": "normalization",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why normalize API data in state?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To make lookup and updates consistent"
+            },
+            {
+              "key": "B",
+              "text": "To remove all records"
+            },
+            {
+              "key": "C",
+              "text": "To hide errors"
+            },
+            {
+              "key": "D",
+              "text": "To change route names"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Normalized data avoids duplicated nested records.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q012",
+          "area": "stale-data",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "How can a thunk avoid stale responses?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Track request identity or cancellation"
+            },
+            {
+              "key": "B",
+              "text": "Accept every response blindly"
+            },
+            {
+              "key": "C",
+              "text": "Clear all state"
+            },
+            {
+              "key": "D",
+              "text": "Disable loading"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Request identity or cancellation prevents an old response overwriting newer data.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q013",
+          "area": "retry",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "When is retry appropriate?",
+          "options": [
+            {
+              "key": "A",
+              "text": "For transient failures"
+            },
+            {
+              "key": "B",
+              "text": "For invalid code syntax"
+            },
+            {
+              "key": "C",
+              "text": "For every 404 forever"
+            },
+            {
+              "key": "D",
+              "text": "For missing components"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Retry is useful when a temporary failure may resolve.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q014",
+          "area": "pagination",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What can a pagination thunk coordinate?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Page parameters and loading state"
+            },
+            {
+              "key": "B",
+              "text": "CSS colors"
+            },
+            {
+              "key": "C",
+              "text": "Reducer names"
+            },
+            {
+              "key": "D",
+              "text": "Browser tabs"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "It can request a page and update loading/data state.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q015",
+          "area": "cache",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What does a cache-aware thunk do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Uses fresh stored data before fetching"
+            },
+            {
+              "key": "B",
+              "text": "Deletes all stored data"
+            },
+            {
+              "key": "C",
+              "text": "Skips validation"
+            },
+            {
+              "key": "D",
+              "text": "Logs secrets"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "It can return cached data when it is still fresh.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q016",
+          "area": "testing",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "How should a thunk be tested?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Mock dispatch, state, and the API boundary"
+            },
+            {
+              "key": "B",
+              "text": "Only by screenshot"
+            },
+            {
+              "key": "C",
+              "text": "By mutating production data"
+            },
+            {
+              "key": "D",
+              "text": "Without assertions"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Unit tests can verify decisions and dispatched actions with mocked boundaries.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q017",
+          "area": "errors",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "Why avoid storing raw exceptions in UI state?",
+          "options": [
+            {
+              "key": "A",
+              "text": "They may be unstable or expose sensitive details"
+            },
+            {
+              "key": "B",
+              "text": "They always improve UX"
+            },
+            {
+              "key": "C",
+              "text": "They are required by Redux"
+            },
+            {
+              "key": "D",
+              "text": "They replace messages"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Map errors to safe, stable information for the UI.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q018",
+          "area": "selectors",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What should selectors provide to a thunk?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A focused view of current state"
+            },
+            {
+              "key": "B",
+              "text": "A CSS declaration"
+            },
+            {
+              "key": "C",
+              "text": "A component instance"
+            },
+            {
+              "key": "D",
+              "text": "A network socket"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Selectors keep state access focused and reusable.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q019",
+          "area": "logout",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "What should a logout flow generally do?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Clear user-scoped state safely"
+            },
+            {
+              "key": "B",
+              "text": "Log the access token"
+            },
+            {
+              "key": "C",
+              "text": "Keep private data forever"
+            },
+            {
+              "key": "D",
+              "text": "Ignore the action"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Logout should remove user-scoped data without exposing credentials.",
+          "reference_url": "https://redux.js.org/usage"
+        },
+        {
+          "id": "react_redux_thunk_q020",
+          "area": "immutability",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "medium",
+          "points": 1,
+          "content_markdown": "How should reducers update data loaded by a thunk?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Return new state values"
+            },
+            {
+              "key": "B",
+              "text": "Mutate existing state directly"
+            },
+            {
+              "key": "C",
+              "text": "Dispatch from the reducer"
+            },
+            {
+              "key": "D",
+              "text": "Write to the DOM"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Immutable reducer updates preserve predictable state changes.",
+          "reference_url": "https://redux.js.org/usage"
+        }
+      ]
+    }
+  ]
+}

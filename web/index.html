@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TN Club Market Preview</title>
+  <style>
+    :root { color-scheme: dark; font-family: Roboto, Inter, ui-sans-serif, system-ui, sans-serif; background: #10131a; color: #f4f1f8; --primary: #d0bcff; --on-primary: #371e5f; --surface: #1b1b21; --surface-container: #211f26; --outline: #948d9f; --muted: #c9c2d0; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #10131a; }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 32px 0 72px; }
+    header { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin: 28px 0; }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: clamp(2rem, 5vw, 4rem); letter-spacing: -0.06em; font-weight: 500; }
+    header p { color: var(--muted); max-width: 480px; line-height: 1.6; }
+    .app-bar { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 0 20px; border-radius: 20px; background: var(--surface-container); box-shadow: 0 2px 8px #0005; }
+    .app-bar strong { font-size: 1.1rem; font-weight: 500; }
+    .app-bar .mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: var(--primary); color: var(--on-primary); font-weight: 800; }
+    .panel { border: 1px solid #34323b; background: #17171d; border-radius: 28px; padding: 24px; box-shadow: 0 12px 32px #0004; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+    input, select, button { min-height: 52px; border: 1px solid var(--outline); border-radius: 14px; padding: 0 16px; background: transparent; color: inherit; font: inherit; transition: border-color .2s, box-shadow .2s, background .2s; }
+    input:focus, select:focus { outline: none; border: 2px solid var(--primary); box-shadow: 0 0 0 3px #d0bcff33; }
+    input { flex: 1 1 260px; }
+    select { flex: 0 1 170px; }
+    button { cursor: pointer; background: var(--primary); border-color: var(--primary); color: var(--on-primary); font-weight: 700; box-shadow: 0 2px 5px #0005; }
+    button:hover { box-shadow: 0 4px 10px #0007; filter: brightness(1.08); }
+    button.secondary { background: transparent; border-color: var(--outline); color: var(--primary); box-shadow: none; }
+    .summary { color: var(--muted); margin-bottom: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    article { display: flex; flex-direction: column; min-height: 230px; border: 1px solid #3a3842; border-top: 5px solid var(--topic-color, #9a8cff); border-radius: 20px; padding: 20px; background: var(--surface-container); box-shadow: 0 3px 8px #0003; }
+    article h2 { font-size: 1.2rem; margin: 16px 0 8px; font-weight: 500; color: var(--topic-color, #d0bcff); }
+    article p { color: var(--muted); line-height: 1.55; flex: 1; }
+    .meta { color: #e3dce9; font-size: .9rem; margin: 14px 0; }
+    .topic-react { --topic-color: #c77dff; --topic-tint: #332244; }
+    .topic-mathematics { --topic-color: #5eead4; --topic-tint: #173d3c; }
+    .pack-react-fundamentals { --topic-color: #c77dff; --topic-tint: #332244; }
+    .pack-react-advanced-middleware { --topic-color: #60a5fa; --topic-tint: #193755; }
+    .pack-react-redux-thunk { --topic-color: #fb923c; --topic-tint: #4a2b18; }
+    .pack-react-redux-saga { --topic-color: #f472b6; --topic-tint: #49223c; }
+    .pack-math-fundamentals { --topic-color: #4ade80; --topic-tint: #183d2b; }
+    .pack-geometry { --topic-color: #22d3ee; --topic-tint: #163d49; }
+    .pack-arithmetic-number-theory { --topic-color: #facc15; --topic-tint: #473b13; }
+    .topic-default { --topic-color: #90caf9; --topic-tint: #1d3548; }
+    .card-labels { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .topic-label { display: inline-flex; align-self: start; border-radius: 999px; padding: 7px 12px; font-size: .78rem; font-weight: 700; background: var(--topic-tint); color: var(--topic-color); }
+    .tag { align-self: start; border-radius: 999px; padding: 7px 12px; font-size: .78rem; font-weight: 700; background: #39304e; color: var(--primary); }
+    .status-installed { background: #214e42; color: #a9f0d7; }
+    .status-update_available { background: #5c4720; color: #ffe2a1; }
+    .status-unavailable { background: #542d3d; color: #ffc4d5; }
+    .empty, pre { color: var(--muted); padding: 32px 0; text-align: center; }
+    details { margin-top: 22px; }
+    summary { cursor: pointer; color: var(--primary); padding: 10px 0; }
+    pre { text-align: left; overflow: auto; background: #101016; border-radius: 14px; padding: 18px; }
+    .modal { position: fixed; inset: 0; z-index: 10; display: none; place-items: center; padding: 20px; background: #0009; }
+    .modal.is-open { display: grid; }
+    .modal-card { width: min(680px, 100%); max-height: min(680px, 90vh); overflow: auto; border: 1px solid #5a526b; border-radius: 24px; padding: 22px; background: #211f26; box-shadow: 0 24px 80px #000b; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 12px; }
+    .modal-header h2 { color: var(--primary); font-weight: 500; }
+    .modal-close { min-height: 42px; padding: 0 14px; }
+    @media (max-width: 680px) { main { width: min(100% - 20px, 1120px); padding-top: 16px; } header { display: block; } header p { margin-top: 12px; } .panel { padding: 16px; border-radius: 22px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="app-bar" aria-label="Marketplace navigation">
+      <span class="mark" aria-hidden="true">TN</span>
+      <strong>TN Club Market</strong>
+    </nav>
+    <header>
+      <div><p>TN CLUB / MARKETPLACE</p><h1>Find your next quiz pack.</h1></div>
+      <p>Simple browser preview backed by a local JSON API. No database and no external dependencies.</p>
+    </header>
+    <section class="panel">
+      <div class="controls">
+        <input id="search" type="search" placeholder="Search title or description">
+        <select id="subject"><option value="">All subjects</option></select>
+        <select id="level"><option value="">All levels</option></select>
+        <select id="kind"><option value="">All kinds</option></select>
+        <select id="status"><option value="">All statuses</option></select>
+        <button id="clear" class="secondary" type="button">Clear all</button>
+      </div>
+      <p id="summary" class="summary">Loading catalog…</p>
+      <div id="grid" class="grid"></div>
+      <details><summary>View catalog JSON</summary><pre id="json">Loading…</pre></details>
+    </section>
+  </main>
+  <div id="json-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <section class="modal-card">
+      <div class="modal-header">
+        <h2 id="modal-title">Pack JSON</h2>
+        <button id="close-modal" class="secondary modal-close" type="button">Close</button>
+      </div>
+      <pre id="modal-json"></pre>
+    </section>
+  </div>
+  <script>
+    const state = { packs: [], query: '', subject: '', level: '', kind: '', status: '' };
+    const $ = (id) => document.getElementById(id);
+    const label = (value) => value.replaceAll('_', ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+    const packClass = (pack) => `pack-${pack.pack_id}`;
+
+    function renderOptions(id, values, suffix) {
+      $(id).innerHTML = `<option value="">All ${suffix}</option>` + values.sort().map(value => `<option value="${value}">${value}</option>`).join('');
+    }
+
+    function render() {
+      const query = state.query.trim().toLowerCase();
+      const visible = state.packs.filter(pack =>
+        (!query || `${pack.title} ${pack.description}`.toLowerCase().includes(query)) &&
+        (!state.subject || pack.subject === state.subject) &&
+        (!state.level || pack.level === state.level) &&
+        (!state.kind || pack.kind === state.kind) &&
+        (!state.status || pack.status === state.status)
+      );
+      $('summary').textContent = `${visible.length} of ${state.packs.length} packs`;
+      $('grid').innerHTML = visible.length ? visible.map(pack => `
+        <article class="${packClass(pack)}">
+          <div class="card-labels">
+            <span class="topic-label">${pack.subject}</span>
+            <span class="tag status-${pack.status}">${label(pack.status)}</span>
+          </div>
+          <h2>${pack.title}</h2>
+          <p>${pack.description}</p>
+          <div class="meta">${pack.subject} · ${pack.level}<br>${pack.question_count} questions · ${pack.kind} · v${pack.content_version}</div>
+          <button class="secondary js-view-json" type="button" data-pack-id="${pack.pack_id}">View JSON</button>
+        </article>`).join('') : '<p class="empty">No matching packs. Clear a filter and try again.</p>';
+      document.querySelectorAll('.js-view-json').forEach(button => {
+        button.addEventListener('click', () => showPack(button.dataset.packId));
+      });
+    }
+
+    window.showPack = (packId) => {
+      const pack = state.packs.find(item => item.pack_id === packId);
+      if (!pack) return;
+      const formatted = JSON.stringify(pack, null, 2);
+      $('json').textContent = formatted;
+      $('modal-json').textContent = formatted;
+      $('modal-title').textContent = `${pack.title} · JSON`;
+      $('json-modal').classList.add('is-open');
+    };
+
+    function closeModal() {
+      $('json-modal').classList.remove('is-open');
+    }
+
+    $('close-modal').addEventListener('click', closeModal);
+    $('json-modal').addEventListener('click', (event) => {
+      if (event.target.id === 'json-modal') closeModal();
+    });
+
+    async function start() {
+      try {
+        const response = await fetch('/api/packs');
+        if (!response.ok) throw new Error('Unable to load catalog');
+        const catalog = await response.json();
+        state.packs = catalog.packs || [];
+        $('json').textContent = JSON.stringify(catalog, null, 2);
+        renderOptions('subject', [...new Set(state.packs.map(pack => pack.subject))], 'subjects');
+        renderOptions('level', [...new Set(state.packs.map(pack => pack.level))], 'levels');
+        renderOptions('kind', [...new Set(state.packs.map(pack => pack.kind))], 'kinds');
+        renderOptions('status', [...new Set(state.packs.map(pack => pack.status))], 'statuses');
+        render();
+      } catch (error) {
+        $('summary').textContent = error.message;
+        $('grid').innerHTML = '<p class="empty">Start server.py and refresh the page.</p>';
+      }
+    }
+
+    $('search').addEventListener('input', (event) => { state.query = event.target.value; render(); });
+    $('subject').addEventListener('change', (event) => { state.subject = event.target.value; render(); });
+    $('level').addEventListener('change', (event) => { state.level = event.target.value; render(); });
+    $('kind').addEventListener('change', (event) => { state.kind = event.target.value; render(); });
+    $('status').addEventListener('change', (event) => { state.status = event.target.value; render(); });
+    $('clear').addEventListener('click', () => {
+      state.query = state.subject = state.level = state.kind = state.status = '';
+      ['search', 'subject', 'level', 'kind', 'status'].forEach(id => $(id).value = '');
+      render();
+    });
+    start();
+  </script>
+</body>
+</html>

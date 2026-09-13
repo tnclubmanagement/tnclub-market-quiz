@@ -1,0 +1,80 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+!.vscode/settings.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+
+# Flutter / Dart / Pub
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/coverage/
+**/doc/api/
+
+# Generated code
+*.freezed.dart
+*.g.dart
+
+# Android
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/key.properties
+*.jks
+*.keystore
+
+# iOS
+/ios/Flutter/.last_build_id
+/ios/Pods/
+
+# macOS / Windows / Linux build artifacts
+/macos/Flutter/ephemeral/
+/windows/Flutter/ephemeral/
+/linux/Flutter/ephemeral/
+
+# Web
+/build/web/
+
+# Symbolication / Obfuscation
+app.*.symbols
+app.*.map.json
+
+# Widget Preview
+.widget_preview/
+
+# Secrets / Environment
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.class
+*.log
+*.pyc
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# FVM Version Cache
+.fvm/
+
+# Content pack databases are generated assets and must be committed
+!assets/content/*.db

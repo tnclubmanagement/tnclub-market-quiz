@@ -1,0 +1,707 @@
+{
+  "pack_id": "react-fundamentals",
+  "title": "React Fundamentals",
+  "description": "Learn components, props, state, hooks, and the core patterns for building React interfaces.",
+  "subject": "React",
+  "topic_id": "technology",
+  "level": "Beginner",
+  "kind": "Standard",
+  "content_version": "1",
+  "schema_version": "1",
+  "quiz_count": 1,
+  "question_count": 20,
+  "status": "available",
+  "quizzes": [
+    {
+      "metadata": {
+        "quiz_id": "react_fundamentals_basics",
+        "title": "React Fundamentals Checkpoint",
+        "subject": "react",
+        "level": "beginner",
+        "kind": "standard",
+        "pack_id": "react-fundamentals",
+        "topic_id": "technology",
+        "language": "javascript",
+        "difficulty": "easy",
+        "time_limit_minutes": 5,
+        "total_questions": 20,
+        "pass_percentage": 70,
+        "timer_mode": "global",
+        "per_question_time_seconds": 0,
+        "negative_marking": false,
+        "shuffle_questions": false,
+        "shuffle_options": false,
+        "strict_mode": false,
+        "tags": [
+          "react",
+          "components"
+        ],
+        "created_by": "TN Club",
+        "created_at": "2026-01-01T00:00:00Z",
+        "version": "1.0.0"
+      },
+      "questions": [
+        {
+          "id": "react_fundamentals_q001",
+          "area": "components",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What is the primary purpose of a React component?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A reusable piece of UI"
+            },
+            {
+              "key": "B",
+              "text": "A database table"
+            },
+            {
+              "key": "C",
+              "text": "A CSS replacement"
+            },
+            {
+              "key": "D",
+              "text": "A web server"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "A component describes a reusable piece of user interface.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q002",
+          "area": "jsx",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What does JSX allow developers to write?",
+          "options": [
+            {
+              "key": "A",
+              "text": "UI markup in JavaScript"
+            },
+            {
+              "key": "B",
+              "text": "SQL inside CSS"
+            },
+            {
+              "key": "C",
+              "text": "Only server routes"
+            },
+            {
+              "key": "D",
+              "text": "Binary data"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "JSX lets JavaScript code express UI markup.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q003",
+          "area": "props",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Are React props normally read-only by the receiving component?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Yes"
+            },
+            {
+              "key": "B",
+              "text": "No, always mutable"
+            },
+            {
+              "key": "C",
+              "text": "Only in production"
+            },
+            {
+              "key": "D",
+              "text": "Only for class components"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Props are inputs owned by the parent and should not be mutated by the child.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q004",
+          "area": "state",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What is React state used for?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Data that can change over time"
+            },
+            {
+              "key": "B",
+              "text": "Static CSS only"
+            },
+            {
+              "key": "C",
+              "text": "Package installation"
+            },
+            {
+              "key": "D",
+              "text": "Browser history only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "State stores changing data that can trigger a re-render.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q005",
+          "area": "hooks",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Which hook stores local state in a function component?",
+          "options": [
+            {
+              "key": "A",
+              "text": "useState"
+            },
+            {
+              "key": "B",
+              "text": "useRoute"
+            },
+            {
+              "key": "C",
+              "text": "useClass"
+            },
+            {
+              "key": "D",
+              "text": "useMarkup"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "useState adds state to a function component.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q006",
+          "area": "effects",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Which hook is used for side effects such as subscriptions?",
+          "options": [
+            {
+              "key": "A",
+              "text": "useEffect"
+            },
+            {
+              "key": "B",
+              "text": "useStyle"
+            },
+            {
+              "key": "C",
+              "text": "useRender"
+            },
+            {
+              "key": "D",
+              "text": "useValue"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "useEffect runs effect logic after rendering.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q007",
+          "area": "keys",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Why should list elements have stable keys?",
+          "options": [
+            {
+              "key": "A",
+              "text": "To help React identify items"
+            },
+            {
+              "key": "B",
+              "text": "To encrypt the list"
+            },
+            {
+              "key": "C",
+              "text": "To add CSS"
+            },
+            {
+              "key": "D",
+              "text": "To fetch data"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Keys help React match list items across renders.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q008",
+          "area": "events",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "How are click handlers commonly attached in JSX?",
+          "options": [
+            {
+              "key": "A",
+              "text": "onClick={handler}"
+            },
+            {
+              "key": "B",
+              "text": "click: handler"
+            },
+            {
+              "key": "C",
+              "text": "onclick-handler"
+            },
+            {
+              "key": "D",
+              "text": "event.listen only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "JSX uses the camel-case onClick prop.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q009",
+          "area": "conditional-rendering",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Which operator is commonly used for simple conditional JSX?",
+          "options": [
+            {
+              "key": "A",
+              "text": "&&"
+            },
+            {
+              "key": "B",
+              "text": "=>"
+            },
+            {
+              "key": "C",
+              "text": "??= only"
+            },
+            {
+              "key": "D",
+              "text": "::"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "The && operator can render JSX when a condition is truthy.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q010",
+          "area": "forms",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What is a controlled input driven by?",
+          "options": [
+            {
+              "key": "A",
+              "text": "React state"
+            },
+            {
+              "key": "B",
+              "text": "The database directly"
+            },
+            {
+              "key": "C",
+              "text": "A CSS selector"
+            },
+            {
+              "key": "D",
+              "text": "The URL fragment only"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Its value is controlled by React state and updated through an event handler.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q011",
+          "area": "immutability",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "How should an array in state usually be updated?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Create a new array"
+            },
+            {
+              "key": "B",
+              "text": "Push into it directly"
+            },
+            {
+              "key": "C",
+              "text": "Delete state"
+            },
+            {
+              "key": "D",
+              "text": "Mutate props"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Immutable updates create a new array reference.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q012",
+          "area": "rendering",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What usually causes a component to render again?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Changed state or props"
+            },
+            {
+              "key": "B",
+              "text": "A CSS comment"
+            },
+            {
+              "key": "C",
+              "text": "An unused import"
+            },
+            {
+              "key": "D",
+              "text": "A file name"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "State and prop changes schedule a new render.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q013",
+          "area": "composition",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What is React composition?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Combining components to build UI"
+            },
+            {
+              "key": "B",
+              "text": "Compiling JavaScript to SQL"
+            },
+            {
+              "key": "C",
+              "text": "Merging CSS files only"
+            },
+            {
+              "key": "D",
+              "text": "Copying browser tabs"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Composition builds larger interfaces from smaller components.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q014",
+          "area": "fragments",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What does a React Fragment avoid adding?",
+          "options": [
+            {
+              "key": "A",
+              "text": "An extra DOM element"
+            },
+            {
+              "key": "B",
+              "text": "All event handlers"
+            },
+            {
+              "key": "C",
+              "text": "Component state"
+            },
+            {
+              "key": "D",
+              "text": "JavaScript code"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Fragments group elements without an additional DOM node.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q015",
+          "area": "memoization",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What can React.memo help avoid?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Unnecessary child renders"
+            },
+            {
+              "key": "B",
+              "text": "All network requests"
+            },
+            {
+              "key": "C",
+              "text": "Every state update"
+            },
+            {
+              "key": "D",
+              "text": "CSS parsing"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "React.memo can skip a child render when its props have not changed.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q016",
+          "area": "refs",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What does useRef commonly provide?",
+          "options": [
+            {
+              "key": "A",
+              "text": "A persistent mutable reference"
+            },
+            {
+              "key": "B",
+              "text": "A new route"
+            },
+            {
+              "key": "C",
+              "text": "A CSS module"
+            },
+            {
+              "key": "D",
+              "text": "A reducer action"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "useRef stores a value that persists without causing a render when changed.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q017",
+          "area": "context",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What problem can Context help solve?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Passing data deeply through a tree"
+            },
+            {
+              "key": "B",
+              "text": "Styling every element"
+            },
+            {
+              "key": "C",
+              "text": "Compiling JSX"
+            },
+            {
+              "key": "D",
+              "text": "Creating SQL indexes"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Context can provide shared values without passing props through every level.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q018",
+          "area": "lifting-state",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What does lifting state up mean?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Moving shared state to a common parent"
+            },
+            {
+              "key": "B",
+              "text": "Deleting state"
+            },
+            {
+              "key": "C",
+              "text": "Putting state in CSS"
+            },
+            {
+              "key": "D",
+              "text": "Freezing all props"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Shared state belongs in the nearest common owner.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q019",
+          "area": "strict-mode",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "What is React Strict Mode primarily for?",
+          "options": [
+            {
+              "key": "A",
+              "text": "Highlighting potential problems in development"
+            },
+            {
+              "key": "B",
+              "text": "Enabling production payments"
+            },
+            {
+              "key": "C",
+              "text": "Replacing TypeScript"
+            },
+            {
+              "key": "D",
+              "text": "Minifying HTML"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "Strict Mode adds development checks and warnings.",
+          "reference_url": "https://react.dev/learn"
+        },
+        {
+          "id": "react_fundamentals_q020",
+          "area": "accessibility",
+          "challenge_type": "concept",
+          "type": "single_choice",
+          "language": "javascript",
+          "difficulty": "easy",
+          "points": 1,
+          "content_markdown": "Which attribute gives an image a text alternative?",
+          "options": [
+            {
+              "key": "A",
+              "text": "alt"
+            },
+            {
+              "key": "B",
+              "text": "href"
+            },
+            {
+              "key": "C",
+              "text": "role-only"
+            },
+            {
+              "key": "D",
+              "text": "title-id"
+            }
+          ],
+          "correct_keys": [
+            "A"
+          ],
+          "explanation": "The alt attribute provides a text alternative for an image.",
+          "reference_url": "https://react.dev/learn"
+        }
+      ]
+    }
+  ]
+}
