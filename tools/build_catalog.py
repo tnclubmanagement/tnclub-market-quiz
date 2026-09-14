@@ -23,7 +23,7 @@ def build_catalog():
     for pack_path in sorted(PACKS_PATH.glob("*.json")):
         with pack_path.open(encoding="utf-8") as pack_file:
             pack = json.load(pack_file)
-        body = pack_body(pack)
+        body = pack_path.read_bytes()
         metadata = {
             key: value for key, value in pack.items() if key != "quizzes"
         }
