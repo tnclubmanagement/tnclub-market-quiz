@@ -14,6 +14,7 @@ PACKS_PATH = ROOT / "data" / "packs"
 WEB_ROOT = ROOT / "web"
 HOST = os.environ.get("MARKET_HOST", "127.0.0.1")
 PORT = int(os.environ.get("MARKET_PORT", "8080"))
+MAX_PACK_BYTES = int(os.environ.get("MARKET_MAX_PACK_BYTES", str(10 * 1024 * 1024)))
 
 
 def pack_body(payload):
@@ -25,7 +26,11 @@ def load_catalog():
     for pack_path in sorted(PACKS_PATH.glob("*.json")):
         with pack_path.open(encoding="utf-8") as pack_file:
             pack = json.load(pack_file)
-        body = pack_body(pack)
+        body = pack_path.read_bytes()
+        if len(body) > MAX_PACK_BYTES:
+            raise ValueError(
+                f"Pack {pack_path.name} exceeds the {MAX_PACK_BYTES}-byte limit"
+            )
         pack.setdefault("is_free", True)
         pack["size_bytes"] = len(body)
         pack["sha256"] = hashlib.sha256(body).hexdigest()
@@ -103,12 +108,12 @@ class MarketHandler(BaseHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
 
     def send_download(self, payload):
-        downloadable = {
-            key: value
-            for key, value in payload.items()
-            if key not in {"is_free", "size_bytes", "sha256"}
-        }
-        body = pack_body(downloadable)
+        body = (PACKS_PATH / f"{payload['pack_id']}.json").read_bytes()
+        if len(body) > MAX_PACK_BYTES:
+            return self.send_json(
+                {"error": "Pack exceeds the maximum download size"},
+                status=413,
+            )
         self.send_response(200)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Content-Disposition", f'attachment; filename="{payload["pack_id"]}.json"')
@@ -132,6 +137,11 @@ class MarketHandler(BaseHTTPRequestHandler):
             body = file_path.read_bytes()
         except FileNotFoundError:
             return self.send_json({"error": "Preview not found"}, status=404)
+        if file_path.parent == PACKS_PATH and len(body) > MAX_PACK_BYTES:
+            return self.send_json(
+                {"error": "Pack exceeds the maximum download size"},
+                status=413,
+            )
         content_type = mimetypes.guess_type(file_path.name)[0] or "application/octet-stream"
         self.send_response(200)
         self.send_header("Content-Type", f"{content_type}; charset=utf-8")

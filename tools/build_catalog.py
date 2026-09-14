@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PACKS_PATH = ROOT / "data" / "packs"
 OUTPUT_PATH = ROOT / "web" / "catalog.json"
 PUBLIC_PACKS_PATH = ROOT / "web" / "packs"
+MAX_PACK_BYTES = 10 * 1024 * 1024
 
 
 def pack_body(payload):
@@ -24,6 +25,10 @@ def build_catalog():
         with pack_path.open(encoding="utf-8") as pack_file:
             pack = json.load(pack_file)
         body = pack_path.read_bytes()
+        if len(body) > MAX_PACK_BYTES:
+            raise ValueError(
+                f"Pack {pack_path.name} exceeds the {MAX_PACK_BYTES}-byte limit"
+            )
         metadata = {
             key: value for key, value in pack.items() if key != "quizzes"
         }
